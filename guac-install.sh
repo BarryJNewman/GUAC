@@ -9,6 +9,8 @@ apt-get update
 # Upgrade existing packages
 apt-get upgrade -y
 
+dpkg --configure -a
+
 # Get script arguments for non-interactive mode
 while [ "$1" != "" ]; do
     case $1 in
