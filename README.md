@@ -1,13 +1,3 @@
-# Apache Guacamole
-
-Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like SSC, Telnet, VNC, and RDP. It is open source and requires no plugins or client software installed. Thanks to HTML5, once Guacamole is installed on a server, all you need to access your remote desktops and servers is a web browser.
-
-Since Guacamole is accessed via your web browser, you can install Guacamole on a Cloud Service Provider (e.g. Microsoft, Amazon, or Google) and access Guacamole through your corporate proxy server. This can enable you to remotely access your Cloud hosted virtual machines without having to configure Firewall Rules or establish a Virtual Private Network.
-
-## Preface
-
-When the need for a "jump server" arose, I deployed the <a href="https://github.com/Azure/azure-quickstart-templates/tree/master/guacamole-rdp-vnc-gateway-existing-vnet">Apache Guacamole Azure Quick Start Template</a>. This template was a great introduction to Apache Guacamole. However, it leveraged multiple Docker images, and I wasn't certian what other software resided within these containers. The magic behind this template came from a base64 encoded custom data <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init">Cloud-Init</a> script, which didn't lend intself to my intention of sharing this template and allowing people to easily specify their desired database password and configuration. Since the skills required to develop ARM templates are required to obtain MCSE: Cloud Platform and Infrastructure certification, and that I needed to deploy Apache Guacamole, the challenge was on to develop an ARM template that could be reused and was configurable.
-
 ## Getting Started
 
 The following instructions will get you up and running with Apache Guacamole in no time at all.
@@ -60,7 +50,7 @@ The following will occur as part of the deployment to Microsoft Azure:
   * Ports 8080 and 8443 are proxied via the Nginx server to Tomcat thus they are not required to be open.
 * Installation of Nginx, Tomcat, MySQL, Guacamole, and a Let's Encrypt SSL certificate
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fbigredthelogger%2Fguacamole%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FBarryJNewman%2Fguacamole%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fbigredthelogger%2Fguacamole%2Fmaster%2Fazuredeploy.json" target="_blank">
