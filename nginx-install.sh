@@ -91,4 +91,4 @@ systemctl restart nginx
 apt-get install python-certbot-nginx -y
 
 # Generate and Install a Let's Encrypt SSL certificate into Nginx
-certbot --nginx -n -d z0112.usgovvirginia.cloudapp.usgovcloudapi.net --email Vickie.L.Lamay@usace.army.mil --agree-tos --redirect --hsts   
+certbot --nginx -n -d z011.usgovvirginia.cloudapp.usgovcloudapi.net --email Vickie.L.Lamay@usace.army.mil --agree-tos --redirect --hsts   
