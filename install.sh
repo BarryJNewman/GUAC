@@ -29,6 +29,6 @@ else
   echo "Error: You must provide the following script arguments: --mysqlpwd --guacpwd --fqdn --email"
   exit 1
 fi
-
+echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 ./nginx-install.sh --fqdn $certbotfqdn --email $certbotemail                   # Install Nginx
 ./guac-install.sh --mysqlpwd $mysqlrootpassword --guacpwd $guacdbuserpassword  # Install Guacamole
