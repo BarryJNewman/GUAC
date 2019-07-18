@@ -30,5 +30,6 @@ else
   exit 1
 fi
 echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+echo "walinuxagent hold" | sudo dpkg --set-selections
 ./nginx-install.sh --fqdn $certbotfqdn --email $certbotemail                   # Install Nginx
 ./guac-install.sh --mysqlpwd $mysqlrootpassword --guacpwd $guacdbuserpassword  # Install Guacamole
