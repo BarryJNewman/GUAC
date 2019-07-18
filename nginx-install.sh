@@ -9,6 +9,8 @@ apt-get update
 # Upgrade existing packages
 apt-get upgrade -y
 
+dpkg --configure -a
+
 # Install nginx
 apt-get install nginx -y
 
