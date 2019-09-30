@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "GUAC"
+        },
+        "vmDNSPrefix": {
+            "value": "myguachole"
+        },
+        "vmSize": {
+            "value": "Standard_A2_v2"
+        },
+        "vmUsername": {
+            "value": "packet"
+        },
+        "vmSSHPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXHGs/UzW8gZvGErZOkjMLJNULU1nQhUqPvyPSIEwVdy0zn1sYictHSMweFPTwzf/lO5EXAAGpdJRzF3j+gqjl23/S5mqOG/YhcsNDHqKoeW2FdKmfHaA/WVnxbXeaXVG+81lxEEvEz/swZcnjh/bLwo3LwnG2VPaVtFpQJH7eNd6nuSR09NmvrG/fXpFxM/iwnO5ccxXiWKnx3lca9BmYy1MPxj/zqBFz8yVgBidx2YfIwtMsP2qL/OXseXHhTMsLz5BoAeUR2sseXxNf5tuD2plk0U6xZWBLtPUF2jpqPSVfA7YFRbjH7a7iYS6ECCtRbmkfQbWn8FUHgBKvB+QN packet@Barrys-MBP"
+        },
+        "vmVnetName": {
+            "value": "GUAC-vent"
+        },
+        "vmVnetRG": {
+            "value": "GUAC-RG"
+        },
+        "vmSubnetName": {
+            "value": "GUAC-subnet"
+        },
+        "mysqlRootPwd": {
+            "value": "password!@#$"
+        },
+        "guacDBPwd": {
+            "value": "password!@#$"
+        },
+        "certEmailAddress": {
+            "value": "barrynewman@outlook.com"
+        },
+        "scriptActionUri_entrypoint": {
+            "value": "https://raw.githubusercontent.com/BarryJNewman/GUAC/master/install.sh"
+        },
+        "scriptActionUri_nginx": {
+            "value": "https://raw.githubusercontent.com/BarryJNewman/GUAC/master/nginx-install.sh"
+        },
+        "scriptActionUri_guacamole": {
+            "value": "https://raw.githubusercontent.com/BarryJNewman/GUAC/master/guac-install.sh"
+        }
+    }
+}
